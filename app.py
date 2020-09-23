@@ -2,10 +2,14 @@
 import os
 
 import discord
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except:
+    load_dotenv = None
 import random
 
-load_dotenv()
+if load_dotenv != None:
+    load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
