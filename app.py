@@ -67,7 +67,8 @@ async def on_message(message):
         'Sieht aus wie Bohnen, schmeckt auch wie Bohnen, sind Bohnen!',
         'Hand geb’ ich nicht, kann leicht festkleben!',
         'Mamor, Stein und Eisen bricht, aber mein kleines Fäustchen nicht!',
-        'Friedlich wie’n Vulkan!'
+        'Friedlich wie’n Vulkan!',
+        'Wenn man sein Leben verlängern will, sollte man alles tun, um es nicht zu verkürzen -Steeven'
     ]
 
     if message.content == 'mud spencer':
