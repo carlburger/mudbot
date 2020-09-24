@@ -52,7 +52,7 @@ async def on_message(message):
         'Ein alter Wermut gibt mehr Mut, und Apfelsaft gibt Pokerkraft!',
         'Bisschen Wut ist gut für’s Blut!',
         'Wenn jetzt der Dicke da wäre, würde er euch erstmal die Eierköpfe gradedreschen!',
-        'Dem beiß ich ’ne Beule in den Bart, dass dem die Hose wegfliegt!',
+        'Dem beiß ich ’ne Beule in den Bart, dass ihm die Hose wegfliegt!',
         'Zieh‘ gefälligst die Kackstelzen ein!',
         'Ach, äh, Verzeihung, ist das was besonderes, wenn man vier Asse auf der Hand hat?',
         'Von meiner Blutprobe könnten die Bullen ein Betriebsfest machen!',
@@ -68,7 +68,7 @@ async def on_message(message):
         'Hand geb’ ich nicht, kann leicht festkleben!',
         'Mamor, Stein und Eisen bricht, aber mein kleines Fäustchen nicht!',
         'Friedlich wie’n Vulkan!',
-        'Wenn man sein Leben verlängern will, sollte man alles tun, um es nicht zu verkürzen -Steeven'
+        'Wenn man sein Leben verlängern will, sollte man alles tun, um es nicht zu verkürzen.'
     ]
 
     if message.content == 'mud spencer':
