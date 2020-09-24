@@ -2,14 +2,10 @@
 import os
 
 import discord
-try:
-    from dotenv import load_dotenv
-except:
-    load_dotenv = None
+from dotenv import load_dotenv
 import random
 
-if load_dotenv != None:
-    load_dotenv()
+load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
@@ -77,6 +73,5 @@ async def on_message(message):
     if message.content == 'mud spencer':
         response = random.choice(spencer_quotes)
         await message.channel.send(response)
-
 
 client.run(TOKEN)
