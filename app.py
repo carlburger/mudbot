@@ -1,20 +1,16 @@
 #!/usr/bin/python3 -u
 import os
-import yaml
 import discord
 from dotenv import load_dotenv
 import random
 
+from mud.spencer import Spencer
+
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-with open("data/spencer.yml", 'r') as stream:
-    try:
-        spencer_quotes = yaml.safe_load(stream)
-    except yaml.YAMLError as exc:
-        print(exc)
-
 client = discord.Client()
 
+spencer = Spencer()
 
 @client.event
 async def on_ready():
@@ -31,9 +27,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
+    await spencer.on_message(message)
 
-    if message.content == 'mud spencer':
-        response = random.choice(spencer_quotes)
-        await message.channel.send(response)
 
 client.run(TOKEN)
