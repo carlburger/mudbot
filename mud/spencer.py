@@ -4,7 +4,7 @@ import random
 class Spencer:
     def __init__(self):
         self.spencer_quotes = []
-        with open('data/spencer.yml', 'r') as stream:
+        with open('data/spencer.yml', 'r', encoding='utf8') as stream:
             try:
                 yaml_content = yaml.safe_load(stream)
                 if yaml_content:

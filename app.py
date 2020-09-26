@@ -5,12 +5,14 @@ from dotenv import load_dotenv
 import random
 
 from mud.spencer import Spencer
+from mud.venture import Venture
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
 client = discord.Client()
 
 spencer = Spencer()
+venture = Venture()
 
 @client.event
 async def on_ready():
@@ -28,6 +30,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     await spencer.on_message(message)
+    await venture.on_message(message)
 
 
 client.run(TOKEN)
